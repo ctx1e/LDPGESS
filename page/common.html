@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GESS - Hệ thống Quản lý Thi cử</title>
+    <title>GESS - Hệ thống hỗ trợ thi và chấm thi</title>
     <link
       rel="icon"
       href="https://res.cloudinary.com/dgrtt4zwh/image/upload/v1755926151/logo2_bgeg9s.png"
@@ -16,9 +16,8 @@
         font-family: "Inter", sans-serif;
       }
 
-      /* Оптимизированные градиенты */
       .gradient-bg {
-        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        background: #3b82f6;
       }
 
       .student-gradient {
@@ -100,6 +99,54 @@
         }
       }
 
+      .zoom-in {
+        opacity: 0;
+        animation: zoomIn 0.8s ease-out forwards;
+      }
+
+      @keyframes zoomIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .slide-up {
+        opacity: 0;
+        animation: slideUp 0.7s ease-out forwards;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in-up {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       /* Оптимизированные эффекты */
       .btn-hover {
         transition: all 0.3s ease;
@@ -124,7 +171,10 @@
     <header class="gradient-bg text-white py-6 shadow-lg">
       <div class="container mx-auto px-6">
         <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-4 slide-in-left">
+          <div
+            class="flex items-center space-x-4 zoom-in"
+            style="animation-delay: 0.2s"
+          >
             <img
               src="https://res.cloudinary.com/dgrtt4zwh/image/upload/v1755926151/logo2_bgeg9s.png"
               alt="GESS Logo"
@@ -132,15 +182,15 @@
             />
             <div>
               <h1 class="text-2xl font-bold">GESS</h1>
-              <p class="text-blue-100 text-sm">Hệ thống Quản lý Thi cử</p>
+              <p class="text-blue-100 text-sm">
+                Hệ thống hỗ trợ thi và chấm thi
+              </p>
             </div>
           </div>
-          <div class="hidden md:flex items-center space-x-6 slide-in-right">
-            <a
-              href="#"
-              class="text-blue-100 hover:text-white transition-colors duration-300"
-              >Trang chủ</a
-            >
+          <div
+            class="hidden md:flex items-center space-x-6 zoom-in"
+            style="animation-delay: 0.4s"
+          >
             <a
               href="#"
               class="text-blue-100 hover:text-white transition-colors duration-300"
@@ -159,7 +209,7 @@
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-16">
       <!-- Hero Section -->
-      <div class="text-center mb-20 scale-in">
+      <div class="text-center mb-20 zoom-in" style="animation-delay: 0.6s">
         <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-8">
           Chào mừng đến với
           <span
@@ -168,7 +218,7 @@
           >
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Hệ thống hỗ trợ thi cử và chấm thi thông minh
+          Hệ thống hỗ trợ thi cử và chấm thi
         </p>
         <div class="mt-8">
           <div
@@ -178,7 +228,10 @@
       </div>
 
       <!-- Access Cards -->
-      <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+      <div
+        class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto slide-up"
+        style="animation-delay: 0.8s"
+      >
         <!-- Student Card -->
         <div
           class="bg-white rounded-3xl shadow-xl p-8 card-hover fade-in fade-in-delay-1 border border-gray-100"
@@ -332,7 +385,7 @@
             </div>
             <div class="flex items-center text-gray-600">
               <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-              <span>Quản lý ban ngành, phòng, học kỳ,..</span>
+              <span>Quản lý ban ngành, phòng,..</span>
             </div>
           </div>
           <a
@@ -358,7 +411,7 @@
       </div>
 
       <!-- Additional Info Section -->
-      <div class="mt-20 text-center fade-in" style="animation-delay: 0.4s">
+      <div class="mt-20 text-center fade-in-up" style="animation-delay: 1s">
         <div
           class="bg-white rounded-3xl shadow-xl p-12 max-w-4xl mx-auto border border-gray-100"
         >
@@ -451,7 +504,8 @@
 
     <!-- Footer -->
     <footer
-      class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-gray-300 py-16 overflow-hidden"
+      class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-gray-300 py-16 overflow-hidden slide-up"
+      style="animation-delay: 1.2s"
     >
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-10">
@@ -491,25 +545,19 @@
                   class="text-2xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent"
                   >GESS</span
                 >
-                <p class="text-xs text-blue-300">Hệ thống Quản lý Thi cử</p>
+                <p class="text-xs text-blue-300">
+                  Hệ thống hỗ trợ thi và chấm thi
+                </p>
               </div>
             </div>
-            <p class="text-gray-300 leading-relaxed mb-6 max-w-md">
-              Hệ thống quản lý thi cử hiện đại, được thiết kế để hỗ trợ toàn
-              diện quá trình thi cử từ khâu lập kế hoạch đến chấm điểm và báo
-              cáo kết quả.
-            </p>
+
             <!-- Project Info -->
             <div class="flex items-center space-x-6 text-sm">
               <div class="flex items-center space-x-2">
                 <div
                   class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
                 ></div>
-                <span class="text-gray-400">Hệ thống Web</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span class="text-gray-400">Phiên bản 1.0.0</span>
+                <span class="text-gray-400">Website</span>
               </div>
             </div>
           </div>
@@ -547,30 +595,12 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   ></path>
                 </svg>
-                <span>Trang chủ</span>
+                <span>Hỗ trợ & FAQ</span>
               </a>
-              <a
-                href="#"
-                class="group flex items-center space-x-2 text-gray-400 hover:text-blue-300 transition-all duration-300 hover:translate-x-1"
-              >
-                <svg
-                  class="w-4 h-4 group-hover:text-blue-400 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                <span>Giới thiệu</span>
-              </a>
+
               <a
                 href="#"
                 class="group flex items-center space-x-2 text-gray-400 hover:text-blue-300 transition-all duration-300 hover:translate-x-1"
@@ -590,10 +620,29 @@
                 </svg>
                 <span>Liên hệ</span>
               </a>
+              <a
+                href="#"
+                class="group flex items-center space-x-2 text-gray-400 hover:text-blue-300 transition-all duration-300 hover:translate-x-1"
+              >
+                <svg
+                  class="w-4 h-4 group-hover:text-blue-400 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>Chính sách bảo mật</span>
+              </a>
             </div>
           </div>
 
-          <!-- Contact Info -->
+          <!-- Social & Contact -->
           <div>
             <h4 class="text-white font-semibold mb-6 text-lg flex items-center">
               <svg
@@ -606,19 +655,59 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                ></path>
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                 ></path>
               </svg>
-              Thông tin liên hệ
+              Kết nối
             </h4>
-            <div class="space-y-3">
-              <div class="flex items-center space-x-2 text-gray-400">
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+              <a
+                href="#"
+                class="group w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300"
+              >
+                <svg
+                  class="w-5 h-5 text-white group-hover:rotate-12 transition-transform"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.46 6c-.77.35-1.6.59-2.46.7a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.13 12.13 0 013 4.8a4.28 4.28 0 001.32 5.71 4.24 4.24 0 01-1.94-.54v.06a4.28 4.28 0 003.44 4.2 4.28 4.28 0 01-1.93.07 4.28 4.28 0 004 2.98 8.6 8.6 0 01-6.33 1.77A12.14 12.14 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.35 8.35 0 0022.46 6z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="group w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300"
+              >
+                <svg
+                  class="w-5 h-5 text-white group-hover:rotate-12 transition-transform"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.6 8.06 8.14 8.8v-6.23h-2.45v-2.57h2.45V9.86c0-2.42 1.45-3.75 3.66-3.75 1.06 0 2.17.19 2.17.19v2.38h-1.22c-1.2 0-1.57.74-1.57 1.5v1.8h2.67l-.43 2.57h-2.24V21c4.54-.74 8.14-4.39 8.14-8.8 0-5.5-4.46-9.96-9.96z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="group w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300"
+              >
+                <svg
+                  class="w-5 h-5 text-white group-hover:rotate-12 transition-transform"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.16c-5.44 0-9.84 4.4-9.84 9.84 0 4.34 3.54 7.88 7.88 7.88 3.36 0 6.24-2.17 7.32-5.16h-2.16c-1.01 1.71-2.87 2.88-5.16 2.88-3.2 0-5.76-2.56-5.76-5.76s2.56-5.76 5.76-5.76c1.53 0 2.88.59 3.91 1.53l2.64-2.64C16.07 3.76 14.13 2.16 12 2.16z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <!-- Contact Info -->
+            <div class="space-y-3 text-sm">
+              <div class="flex items-center space-x-3 text-gray-400">
                 <svg
                   class="w-4 h-4 text-blue-400"
                   fill="none"
@@ -632,9 +721,9 @@
                     d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   ></path>
                 </svg>
-                <span>info@gess.edu.vn</span>
+                <span>support@gess.edu.vn</span>
               </div>
-              <div class="flex items-center space-x-2 text-gray-400">
+              <div class="flex items-center space-x-3 text-gray-400">
                 <svg
                   class="w-4 h-4 text-blue-400"
                   fill="none"
@@ -650,72 +739,37 @@
                 </svg>
                 <span>+84 123 456 789</span>
               </div>
-              <div class="flex items-center space-x-2 text-gray-400">
-                <svg
-                  class="w-4 h-4 text-blue-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  ></path>
-                </svg>
-                <span>FPT University, Hà Nội</span>
-              </div>
             </div>
           </div>
         </div>
 
-        <!-- Bottom Footer -->
+        <!-- Bottom Bar -->
         <div class="border-t border-gray-700 pt-8">
-          <div class="flex flex-col md:flex-row justify-between items-center">
-            <div class="text-center md:text-left mb-4 md:mb-0">
-              <p class="text-gray-400 text-sm">
-                &copy; 2024 GESS. Tất cả quyền được bảo lưu.
+          <div class="flex flex-col lg:flex-row items-center justify-between">
+            <div class="text-center lg:text-left mb-4 lg:mb-0">
+              <p class="text-sm text-gray-400">
+                © 2025
+                <span class="text-blue-400 font-semibold"
+                  >GESS - Hệ thống thi và chấm thi và chấm thi tự động</span
+                >
               </p>
-              <p class="text-gray-400 text-sm">Phát triển bởi FPT University</p>
             </div>
-            <div class="flex space-x-6">
+            <div class="flex items-center space-x-6 text-sm">
               <a
                 href="#"
-                class="text-gray-400 hover:text-blue-300 transition-colors duration-300"
+                class="text-gray-400 hover:text-blue-300 transition-colors"
+                >Điều khoản sử dụng</a
               >
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
-                  ></path>
-                </svg>
-              </a>
               <a
                 href="#"
-                class="text-gray-400 hover:text-blue-300 transition-colors duration-300"
+                class="text-gray-400 hover:text-blue-300 transition-colors"
+                >Chính sách bảo mật</a
               >
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
-                  ></path>
-                </svg>
-              </a>
               <a
                 href="#"
-                class="text-gray-400 hover:text-blue-300 transition-colors duration-300"
+                class="text-gray-400 hover:text-blue-300 transition-colors"
+                >Cookie Policy</a
               >
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  ></path>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
@@ -734,7 +788,7 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+            entry.target.style.transform = "translateY(0) scale(1)";
           }
         });
       }, observerOptions);
@@ -744,9 +798,24 @@
         // Анимация для карточек при прокрутке
         document.querySelectorAll(".card-hover").forEach((el) => {
           el.style.opacity = "0";
-          el.style.transform = "translateY(20px)";
+          el.style.transform = "translateY(20px) scale(0.95)";
           el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
           observer.observe(el);
+        });
+
+        // Добавляем плавное появление для всех анимированных элементов
+        const animatedElements = document.querySelectorAll(
+          ".zoom-in, .slide-up, .fade-in-up"
+        );
+        animatedElements.forEach((el, index) => {
+          el.style.opacity = "0";
+          if (el.classList.contains("zoom-in")) {
+            el.style.transform = "scale(0.8)";
+          } else if (el.classList.contains("slide-up")) {
+            el.style.transform = "translateY(30px)";
+          } else if (el.classList.contains("fade-in-up")) {
+            el.style.transform = "translateY(40px)";
+          }
         });
 
         // Плавная прокрутка для внутренних ссылок
