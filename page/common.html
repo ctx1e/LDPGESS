@@ -34,27 +34,27 @@
 
       /* Оптимизированные анимации */
       .card-hover {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transform: translateY(-6px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
       }
 
       .fade-in {
         opacity: 0;
-        animation: fadeIn 0.6s ease-out forwards;
+        animation: fadeIn 0.4s ease-out forwards;
       }
 
       .fade-in-delay-1 {
-        animation-delay: 0.1s;
+        animation-delay: 0.05s;
       }
       .fade-in-delay-2 {
-        animation-delay: 0.2s;
+        animation-delay: 0.1s;
       }
       .fade-in-delay-3 {
-        animation-delay: 0.3s;
+        animation-delay: 0.15s;
       }
 
       @keyframes fadeIn {
@@ -65,7 +65,7 @@
 
       .slide-in-left {
         opacity: 0;
-        animation: slideInLeft 0.6s ease-out forwards;
+        animation: slideInLeft 0.4s ease-out forwards;
       }
 
       @keyframes slideInLeft {
@@ -77,7 +77,7 @@
 
       .slide-in-right {
         opacity: 0;
-        animation: slideInRight 0.6s ease-out forwards;
+        animation: slideInRight 0.4s ease-out forwards;
       }
 
       @keyframes slideInRight {
@@ -89,7 +89,7 @@
 
       .scale-in {
         opacity: 0;
-        animation: scaleIn 0.6s ease-out forwards;
+        animation: scaleIn 0.4s ease-out forwards;
       }
 
       @keyframes scaleIn {
@@ -101,13 +101,13 @@
 
       .zoom-in {
         opacity: 0;
-        animation: zoomIn 0.8s ease-out forwards;
+        animation: zoomIn 0.5s ease-out forwards;
       }
 
       @keyframes zoomIn {
         from {
           opacity: 0;
-          transform: scale(0.8);
+          transform: scale(0.9);
         }
         to {
           opacity: 1;
@@ -117,13 +117,13 @@
 
       .slide-up {
         opacity: 0;
-        animation: slideUp 0.7s ease-out forwards;
+        animation: slideUp 0.5s ease-out forwards;
       }
 
       @keyframes slideUp {
         from {
           opacity: 0;
-          transform: translateY(30px);
+          transform: translateY(20px);
         }
         to {
           opacity: 1;
@@ -133,13 +133,13 @@
 
       .fade-in-up {
         opacity: 0;
-        animation: fadeInUp 0.8s ease-out forwards;
+        animation: fadeInUp 0.5s ease-out forwards;
       }
 
       @keyframes fadeInUp {
         from {
           opacity: 0;
-          transform: translateY(40px);
+          transform: translateY(25px);
         }
         to {
           opacity: 1;
@@ -149,20 +149,20 @@
 
       /* Оптимизированные эффекты */
       .btn-hover {
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
       }
 
       .btn-hover:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       }
 
       .icon-hover {
-        transition: transform 0.3s ease;
+        transition: transform 0.2s ease;
       }
 
       .card-hover:hover .icon-hover {
-        transform: scale(1.05);
+        transform: scale(1.03);
       }
     </style>
   </head>
@@ -173,7 +173,7 @@
         <div class="flex items-center justify-between">
           <div
             class="flex items-center space-x-4 zoom-in"
-            style="animation-delay: 0.2s"
+            style="animation-delay: 0.1s"
           >
             <img
               src="https://res.cloudinary.com/dgrtt4zwh/image/upload/v1755926151/logo2_bgeg9s.png"
@@ -189,16 +189,16 @@
           </div>
           <div
             class="hidden md:flex items-center space-x-6 zoom-in"
-            style="animation-delay: 0.4s"
+            style="animation-delay: 0.2s"
           >
             <a
               href="#"
-              class="text-blue-100 hover:text-white transition-colors duration-300"
+              class="text-blue-100 hover:text-white transition-colors duration-200"
               >Giới thiệu</a
             >
             <a
               href="#"
-              class="text-blue-100 hover:text-white transition-colors duration-300"
+              class="text-blue-100 hover:text-white transition-colors duration-200"
               >Liên hệ</a
             >
           </div>
@@ -209,7 +209,7 @@
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-16">
       <!-- Hero Section -->
-      <div class="text-center mb-20 zoom-in" style="animation-delay: 0.6s">
+      <div class="text-center mb-20 zoom-in" style="animation-delay: 0.3s">
         <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-8">
           Chào mừng đến với
           <span
@@ -230,7 +230,7 @@
       <!-- Access Cards -->
       <div
         class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto slide-up"
-        style="animation-delay: 0.8s"
+        style="animation-delay: 0.4s"
       >
         <!-- Student Card -->
         <div
@@ -276,7 +276,7 @@
           >
             <span class="mr-2">Truy cập</span>
             <svg
-              class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+              class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -335,7 +335,7 @@
           >
             <span class="mr-2">Truy cập</span>
             <svg
-              class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+              class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -394,7 +394,7 @@
           >
             <span class="mr-2">Truy cập</span>
             <svg
-              class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+              class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -411,7 +411,7 @@
       </div>
 
       <!-- Additional Info Section -->
-      <div class="mt-20 text-center fade-in-up" style="animation-delay: 1s">
+      <div class="mt-20 text-center fade-in-up" style="animation-delay: 0.5s">
         <div
           class="bg-white rounded-3xl shadow-xl p-12 max-w-4xl mx-auto border border-gray-100"
         >
@@ -583,7 +583,7 @@
             <div class="space-y-3">
               <a
                 href="#"
-                class="group flex items-center space-x-2 text-gray-400 hover:text-blue-300 transition-all duration-300 hover:translate-x-1"
+                class="group flex items-center space-x-2 text-gray-400 hover:text-blue-300 transition-all duration-200 hover:translate-x-1"
               >
                 <svg
                   class="w-4 h-4 group-hover:text-blue-400 transition-colors"
@@ -603,7 +603,7 @@
 
               <a
                 href="#"
-                class="group flex items-center space-x-2 text-gray-400 hover:text-blue-300 transition-all duration-300 hover:translate-x-1"
+                class="group flex items-center space-x-2 text-gray-400 hover:text-blue-300 transition-all duration-200 hover:translate-x-1"
               >
                 <svg
                   class="w-4 h-4 group-hover:text-blue-400 transition-colors"
@@ -622,7 +622,7 @@
               </a>
               <a
                 href="#"
-                class="group flex items-center space-x-2 text-gray-400 hover:text-blue-300 transition-all duration-300 hover:translate-x-1"
+                class="group flex items-center space-x-2 text-gray-400 hover:text-blue-300 transition-all duration-200 hover:translate-x-1"
               >
                 <svg
                   class="w-4 h-4 group-hover:text-blue-400 transition-colors"
@@ -664,7 +664,7 @@
             <div class="flex space-x-4 mb-6">
               <a
                 href="#"
-                class="group w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300"
+                class="group w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200"
               >
                 <svg
                   class="w-5 h-5 text-white group-hover:rotate-12 transition-transform"
@@ -678,7 +678,7 @@
               </a>
               <a
                 href="#"
-                class="group w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300"
+                class="group w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200"
               >
                 <svg
                   class="w-5 h-5 text-white group-hover:rotate-12 transition-transform"
@@ -686,13 +686,13 @@
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.6 8.06 8.14 8.8v-6.23h-2.45v-2.57h2.45V9.86c0-2.42 1.45-3.75 3.66-3.75 1.06 0 2.17.19 2.17.19v2.38h-1.22c-1.2 0-1.57.74-1.57 1.5v1.8h2.67l-.43 2.57h-2.24V21c4.54-.74 8.14-4.39 8.14-8.8 0-5.5-4.46-9.96-9.96z"
+                    d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.6 8.06 8.14 8.8v-6.23h-2.45v-2.57h2.45V9.86c0-2.42 1.45-3.75 3.66-3.75 1.06 0 2.17.19 2.17.19v2.38h-1.22c-1.2 0-1.57.74-1.57 1.5v1.8h2.67l-.43 2.57h-2.24V21c4.54-.74 8.14-4.39 8.14-8.8 0-5.5-4.46-9.96-9.96-9.96z"
                   />
                 </svg>
               </a>
               <a
                 href="#"
-                class="group w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300"
+                class="group w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200"
               >
                 <svg
                   class="w-5 h-5 text-white group-hover:rotate-12 transition-transform"
